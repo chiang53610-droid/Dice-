@@ -1,0 +1,49 @@
+# ===== Environment & Secrets =====
+# 绝对不能上传含有 API Key 的环境变量文件
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+.env.staging
+*.env
+
+# ===== Logs =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ===== Build Output =====
+dist/
+dist-ssr/
+build/
+
+# ===== Dependencies =====
+node_modules/
+
+# ===== Capacitor / Mobile =====
+# 原生平台目录由 `npx cap add` 自动生成，建议忽略（按需调整）
+# android/
+# ios/
+# 如果你希望将 android/ios 纳入版本控制，请注释上面两行
+
+# ===== Temp & Generated =====
+*.local
+*.zip
+.cache/
+
+# ===== Editor & OS =====
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">台灣吹牛王</string>
+    <string name="title_activity_main">台灣吹牛王</string>
+    <string name="package_name">com.liarsdice.app</string>
+    <string name="custom_url_scheme">com.liarsdice.app</string>
+</resources>

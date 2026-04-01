@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <!-- Mobile-first viewport: no scaling, full-screen feel -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, viewport-fit=cover" />
+    <!-- PWA / home-screen meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="台灣吹牛王" />
+    <meta name="theme-color" content="#0c1222" />
+    <title>台灣吹牛王 · 3D Liar's Dice</title>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- 3D Canvas -->
+      <div id="canvas-container"></div>
+
+      <!-- UI overlay -->
+      <div id="ui-overlay" class="ui-layer">
+        <div class="title-container">
+          <h1>台灣吹牛王</h1>
+          <p class="subtitle">Liar's Dice · 3D</p>
+        </div>
+
+        <!-- Status hint shown during shake phase -->
+        <div id="status-hint" class="status-hint hidden">搖骰中…</div>
+
+        <div class="controls-container">
+          <button id="open-btn" class="glass-btn open-btn">OPEN 開蓋</button>
+          <button id="shake-btn" class="glass-btn shake-btn hidden">SHAKE 再搖</button>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
