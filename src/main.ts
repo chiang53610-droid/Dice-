@@ -56,7 +56,8 @@ const camera = new THREE.PerspectiveCamera(
   100
 );
 camera.position.set(0, 16, 14);
-camera.lookAt(0, 0, 0);
+const LOOK_AT = new THREE.Vector3(0, 1.5, 0); // shifted up → cup appears ~10% lower on screen
+camera.lookAt(LOOK_AT);
 
 /* ──────────────────────────────────────────────
    Lighting — 3-point setup for cinematic look
@@ -291,9 +292,25 @@ function animate() {
   const t = performance.now() * 0.00025;
   camera.position.x = Math.sin(t) * 1.5;
   camera.position.z = 14 + Math.cos(t) * 1.5;
-  camera.lookAt(0, 0, 0);
+  camera.lookAt(LOOK_AT);
 
   renderer.render(scene, camera);
+}
+
+/* ──────────────────────────────────────────────
+   Settings panel
+   ────────────────────────────────────────────── */
+{
+  const settingsBtn = document.getElementById('settings-btn')!;
+  const settingsPanel = document.getElementById('settings-panel')!;
+  const settingsBack = document.getElementById('settings-back')!;
+
+  settingsBtn.addEventListener('click', () => {
+    settingsPanel.classList.remove('hidden');
+  });
+  settingsBack.addEventListener('click', () => {
+    settingsPanel.classList.add('hidden');
+  });
 }
 
 // Boot
