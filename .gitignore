@@ -26,10 +26,11 @@ build/
 node_modules/
 
 # ===== Capacitor / Mobile =====
-# 原生平台目录由 `npx cap add` 自动生成，建议忽略（按需调整）
 # android/
-# ios/
-# 如果你希望将 android/ios 纳入版本控制，请注释上面两行
+
+# Xcode user-specific data
+ios/App/App.xcodeproj/xcuserdata/
+ios/App/App.xcodeproj/project.xcworkspace/xcuserdata/
 
 # ===== Temp & Generated =====
 *.local
